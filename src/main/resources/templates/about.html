@@ -2,17 +2,22 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Homepagina</title>
+    <title>About pagina</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/static/CSS/party.css}" href="/static/CSS/party.css">
 </head>
 <body>
+<a th:href="@{/home}">Homepage</a>
+<h1>About me</h1>
+<p>This is all about me...</p>
 
-<h1>Homepagina</h1>
+<ol>
+    <li th:text="${name}">name</li>
+    <li th:text="${street}">street</li>
+    <li th:text="${nr}">nr</li>
+</ol>
 
-<a th:href="@{/about}">About</a>
-<p th:text="${myCalculatedValue}">onbekend nummer</p>
-
-
-
+<section>
+    <p th:text="|Ik ben ${name}, ik woon in ${street} nummer ${nr}|"></p>
+</section>
 </body>
 </html>
