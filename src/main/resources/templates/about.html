@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>About pagina</title>
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/static/CSS/party.css}" href="/static/CSS/party.css">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
+
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a class="nav" th:href="@{/home}">Homepage</a>
+                <a class="nav" th:href="@{/pay}">Pay</a>
+                <a class="nav" th:href="@{/venuedetails}">Venue</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 <body>
-<a th:href="@{/home}">Homepage</a>
+
+
 <h1>About me</h1>
+
+
 <p>This is all about me...</p>
 
 <ol>
