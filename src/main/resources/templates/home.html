@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepagina</title>
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/static/CSS/party.css}" href="/static/CSS/party.css">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
+
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a class="nav" th:href="@{/home}">About</a>
+                <a class="nav" th:href="@{/pay}">Pay</a>
+                <a class="nav" th:href="@{/venuedetails}">Venue</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
 <body>
 
 <h1>Homepagina</h1>
 
-<a th:href="@{/about}">About</a>
-<p th:text="${myCalculatedValue}">onbekend nummer</p>
 
+<p th:text="${myCalculatedValue}">onbekend nummer</p>
 
 
 </body>

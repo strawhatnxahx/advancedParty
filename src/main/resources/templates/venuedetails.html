@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>venuedetails</title>
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/static/CSS/party.css}" href="/static/CSS/party.css">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
+
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a class="nav" th:href="@{/home}">Homepage</a>
+                <a class="nav" th:href="@{/about}">About</a>
+                <a class="nav" th:href="@{/pay}">Pay</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 <body>
-<a th:href="@{/home}">Homepage</a>
+
 <h1>Venue Details</h1>
 
-<h2 th:text="|Venue: ${venue.getVenueName()} extra info: ${venue.getLinkMoreInfo()} |"></h2>
+
+<h2 th:text="|Venue: ${venue.getVenueName()}|"></h2>
+
+<dl>
+    <dt>More info:</dt>
+    <dd><a th:href="${venue.getLinkMoreInfo()}">www.VenueZonderNaam.org</a></dd>
+
+    <dt>Capacity:</dt>
+    <dd th:text="${venue.getCapacity()}"></dd>
+
+    <dt>Food?:</dt>
+    <dd th:text="${venue.getFoodProvided()}"></dd>
+
+    <dt>Indoor?:</dt>
+    <dd th:text="${venue.getIndoor()}"></dd>
+
+    <dt>Outdoor:</dt>
+    <dd th:text="${venue.getOutdoor()}"></dd>
+
+    <dt>Parking?:</dt>
+    <dd th:text="${venue.getFreeParkingAvailable()}"></dd>
+
+    <dt>City:</dt>
+    <dd th:text="${venue.getCity()}"></dd>
+
+    <dt>Distance:</dt>
+    <dd th:text="${venue.getDistanceFromPublicTransportInKm()}"></dd>
+
+
+</dl>
 
 </body>
 </html>
