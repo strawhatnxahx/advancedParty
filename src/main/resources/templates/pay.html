@@ -2,12 +2,26 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/party.css}" href="/css/party.css"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="../static/CSS/"/>
     <title>Pay</title>
 </head>
+
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a class="nav" th:href="@{/home}">Homepage</a>
+                <a class="nav" th:href="@{/about}">About</a>
+                <a class="nav" th:href="@{/venuedetails}">Venue</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
 <body>
-<h1>Pay</h1>
-<p th:text="${dateToday}">datum</p>
-<p th:text="${betaalDatum}">betaal datum</p>
+<h1>Payment</h1>
+
+<p th:text="${dateToday}">Date</p>
+<p th:text="${betaalDatum}">Pay Date</p>
 </body>
 </html>
