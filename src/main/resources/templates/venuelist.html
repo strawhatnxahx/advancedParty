@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Homepagina</title>
+    <title>venuedetails</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
 
@@ -10,20 +10,30 @@
     <nav>
         <ul>
             <li>
+                <a class="nav" th:href="@{/home}">Homepage</a>
                 <a class="nav" th:href="@{/about}">About</a>
                 <a class="nav" th:href="@{/pay}">Pay</a>
-                <a class="nav" th:href="@{/venuelist}">Venue List</a>
             </li>
         </ul>
     </nav>
 </header>
-
 <body>
 
-<h1>Homepagina</h1>
 
 
-<p th:text="${myCalculatedValue}">onbekend nummer</p>
+<h1 class="title">Venue List</h1>
+
+<div class="parent">
+
+<a class="button2" th:href="@{/venuedetails/1}">Venue 1</a>
+    <div class="padding"></div>
+<a class="button2" th:href="@{/venuedetails/2}">Venue 2</a>
+    <div class="padding"></div>
+<a class="button2" th:href="@{/venuedetails/3}">Venue 3</a>
+
+</div>
+
+
 
 
 </body>

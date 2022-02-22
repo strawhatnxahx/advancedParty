@@ -18,39 +18,52 @@
     </nav>
 </header>
 <body>
+<div>
+    <div class="row1content" th:if="${venue}">
 
-<h1>Venue Details</h1>
-
-
-<h2 th:text="|Venue: ${venue.getVenueName()}|"></h2>
-
-<dl>
-    <dt>More info:</dt>
-    <dd><a th:href="${venue.getLinkMoreInfo()}">www.VenueZonderNaam.org</a></dd>
-
-    <dt>Capacity:</dt>
-    <dd th:text="${venue.getCapacity()}"></dd>
-
-    <dt>Food?:</dt>
-    <dd th:text="${venue.getFoodProvided()}"></dd>
-
-    <dt>Indoor?:</dt>
-    <dd th:text="${venue.getIndoor()}"></dd>
-
-    <dt>Outdoor:</dt>
-    <dd th:text="${venue.getOutdoor()}"></dd>
-
-    <dt>Parking?:</dt>
-    <dd th:text="${venue.getFreeParkingAvailable()}"></dd>
-
-    <dt>City:</dt>
-    <dd th:text="${venue.getCity()}"></dd>
-
-    <dt>Distance:</dt>
-    <dd th:text="${venue.getDistanceFromPublicTransportInKm()}"></dd>
+        <h1 class="title">Venue Details</h1>
 
 
-</dl>
+        <div class="parent">
+
+            <h2 th:text="|Venue: ${venue.getVenueName()}|"></h2>
+
+            <dl>
+                <dt>More info:</dt>
+                <dd th:text="${venue.getLinkMoreInfo()}"></dd>
+
+
+                <dt>Capacity:</dt>
+                <dd th:text="${venue.getCapacity()}"></dd>
+
+                <dt>Food?:</dt>
+                <dd th:text="${venue.getFoodProvided()}"></dd>
+
+                <dt>Indoor?:</dt>
+                <dd th:text="${venue.getIndoor()}"></dd>
+
+                <dt>Outdoor:</dt>
+                <dd th:text="${venue.getOutdoor()}"></dd>
+
+                <dt>Parking?:</dt>
+                <dd th:text="${venue.getFreeParkingAvailable()}"></dd>
+
+                <dt>City:</dt>
+                <dd th:text="${venue.getCity()}"></dd>
+
+                <dt>Distance:</dt>
+                <dd th:text="${venue.getDistanceFromPublicTransportInKm()}"></dd>
+
+
+            </dl>
+
+        </div>
+    </div>
+
+        <div class="row1content" th:unless="${venue}">
+            <p>no venue was chosen</p>
+        </div>
+</div>
 
 </body>
 </html>
