@@ -37,16 +37,16 @@
                 <dd th:text="${venue.getCapacity()}"></dd>
 
                 <dt>Food?:</dt>
-                <dd th:text="${venue.getFoodProvided()}"></dd>
+                <dd th:text="${venue.booleanToText(venue.getFoodProvided())}"></dd>
 
                 <dt>Indoor?:</dt>
-                <dd th:text="${venue.getIndoor()}"></dd>
+                <dd th:text="${venue.booleanToText(venue.getIndoor())}"></dd>
 
                 <dt>Outdoor:</dt>
-                <dd th:text="${venue.getOutdoor()}"></dd>
+                <dd th:text="${venue.booleanToText(venue.getOutdoor())}"></dd>
 
                 <dt>Parking?:</dt>
-                <dd th:text="${venue.getFreeParkingAvailable()}"></dd>
+                <dd th:text="${venue.booleanToText(venue.getFreeParkingAvailable())}"></dd>
 
                 <dt>City:</dt>
                 <dd th:text="${venue.getCity()}"></dd>

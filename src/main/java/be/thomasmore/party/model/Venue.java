@@ -75,4 +75,11 @@ public class Venue {
     public double getDistanceFromPublicTransportInKm() {
         return distanceFromPublicTransportInKm;
     }
+
+    public String booleanToText(boolean function) {
+        if (function) {
+            return "Yes";
+        }
+        return "No";
+    }
 }
