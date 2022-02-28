@@ -6,21 +6,15 @@
     <title>Pay</title>
 </head>
 
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a class="nav" th:href="@{/home}">Homepage</a>
-                <a class="nav" th:href="@{/about}">About</a>
-                <a class="nav" th:href="@{/venuelist}">Venue List</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+<div th:replace="fragments/header :: header">Hier komt de header</div>
 
 <body>
 <h1>Payment</h1>
 <p th:text="${dateToday}">Date</p>
 <p th:text="${betaalDatum}">Pay Date</p>
+
+<div class="footer">
+    <div th:replace="fragments/footer :: footer">Hier komt de footer</div>
+</div>
 </body>
 </html>

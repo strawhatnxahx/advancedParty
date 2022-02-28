@@ -6,35 +6,27 @@
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
 
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a class="nav" th:href="@{/home}">Homepage</a>
-                <a class="nav" th:href="@{/about}">About</a>
-                <a class="nav" th:href="@{/pay}">Pay</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+<div th:replace="fragments/header :: header">Hier komt de header</div>
+
+
 <body>
 
 
 
 <h1 class="title">Venue List</h1>
 
-<div class="parent">
+<div th:each="venue: ${venues}" class="parent">
 
-<a class="button2" th:href="@{/venuedetails/1}">Venue 1</a>
+<a class="button2" th:href="@{|/venuedetails/${venue.id}|}">
+    <span th:text="${venue.venueName}">venue name</span></a>
     <div class="padding"></div>
-<a class="button2" th:href="@{/venuedetails/2}">Venue 2</a>
-    <div class="padding"></div>
-<a class="button2" th:href="@{/venuedetails/3}">Venue 3</a>
 
 </div>
 
 
 
-
+<div class="footer">
+<div th:replace="fragments/footer :: footer">Hier komt de footer</div>
+</div>
 </body>
 </html>

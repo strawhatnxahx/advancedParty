@@ -6,17 +6,9 @@
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
 
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a class="nav" th:href="@{/home}">Homepage</a>
-                <a class="nav" th:href="@{/about}">About</a>
-                <a class="nav" th:href="@{/pay}">Pay</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+<div th:replace="fragments/header :: header">Hier komt de header</div>
+
+
 <body>
 <div>
     <div class="row1content" th:if="${venue}">
@@ -64,6 +56,8 @@
             <p>no venue was chosen</p>
         </div>
 </div>
-
+<div class="footer">
+    <div th:replace="fragments/footer :: footer">Hier komt de footer</div>
+</div>
 </body>
 </html>

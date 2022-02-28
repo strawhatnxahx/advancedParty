@@ -5,19 +5,9 @@
     <title>About pagina</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
-
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a class="nav" th:href="@{/home}">Homepage</a>
-                <a class="nav" th:href="@{/pay}">Pay</a>
-                <a class="nav" th:href="@{/venuelist}">Venue List</a>
-            </li>
-        </ul>
-    </nav>
-</header>
 <body>
+
+<div th:replace="fragments/header :: header">Hier komt de header</div>
 
 
 <h1>About me</h1>
@@ -34,5 +24,10 @@
 <section>
     <p th:text="|Ik ben ${name}, ik woon in ${street} nummer ${nr}|"></p>
 </section>
+
+<div class="footer">
+    <div th:replace="fragments/footer :: footer">Hier komt de footer</div>
+</div>
+
 </body>
 </html>

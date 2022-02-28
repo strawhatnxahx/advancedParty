@@ -6,17 +6,7 @@
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
 
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a class="nav" th:href="@{/about}">About</a>
-                <a class="nav" th:href="@{/pay}">Pay</a>
-                <a class="nav" th:href="@{/venuelist}">Venue List</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+<div th:replace="fragments/header :: header">Hier komt de header</div>
 
 <body>
 
@@ -25,6 +15,8 @@
 
 <p th:text="${myCalculatedValue}">onbekend nummer</p>
 
-
+<div class="footer">
+    <div th:replace="fragments/footer :: footer">Hier komt de footer</div>
+</div>
 </body>
 </html>
