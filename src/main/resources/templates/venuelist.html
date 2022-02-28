@@ -2,21 +2,31 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Homepagina</title>
+    <title>venuedetails</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/CSS/party.css}" href="/static/CSS/party.css">
 </head>
 
 <div th:replace="fragments/header :: header">Hier komt de header</div>
 
+
 <body>
 
-<h1>Homepagina</h1>
 
 
-<p th:text="${myCalculatedValue}">onbekend nummer</p>
+<h1 class="title">Venue List</h1>
+
+<div th:each="venue: ${venues}" class="parent">
+
+<a class="button2" th:href="@{|/venuedetails/${venue.id}|}">
+    <span th:text="${venue.venueName}">venue name</span></a>
+    <div class="padding"></div>
+
+</div>
+
+
 
 <div class="footer">
-    <div th:replace="fragments/footer :: footer">Hier komt de footer</div>
+<div th:replace="fragments/footer :: footer">Hier komt de footer</div>
 </div>
 </body>
 </html>

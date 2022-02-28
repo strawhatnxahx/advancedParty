@@ -6,7 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Venue {
     @Id
-    private Integer id;
+    public Integer id;
     private String venueName;
     private String linkMoreInfo;
     private int capacity;
@@ -74,5 +74,12 @@ public class Venue {
 
     public double getDistanceFromPublicTransportInKm() {
         return distanceFromPublicTransportInKm;
+    }
+
+    public String booleanToText(boolean function) {
+        if (function) {
+            return "Yes";
+        }
+        return "No";
     }
 }
